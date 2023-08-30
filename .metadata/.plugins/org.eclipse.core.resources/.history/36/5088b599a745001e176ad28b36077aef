@@ -1,0 +1,68 @@
+package com.example.demo.controller;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.Entity.Plan;
+import com.example.demo.service.PlanServiceImpl;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
+@RestController
+public class Controller {
+	
+	
+		@Autowired
+		private PlanServiceImpl planServiceImpl;
+		
+		
+		@GetMapping("/categories")
+		public ResponseEntity<Map<Integer, String>> getPlanCateogry()
+		{
+			Map<Integer, String> categories = planServiceImpl.getPlanCateogry();
+			return new ResponseEntity <>(categories,HttpStatus.OK);
+		}
+		
+		
+		@PostMapping("/plan")
+		public ResponseEntity<String> savePlan(@RequestBody Plan plan) {
+			String responseMsg="";
+			boolean isSave = planServiceImpl.savePlan(plan);
+			if(isSave)
+			{
+				responseMsg = "Plan Saved";
+			}
+			else {
+				responseMsg = "Not Saved";
+			}
+			return new ResponseEntity<>(responseMsg,HttpStatus.OK);
+			
+		}
+		
+		@GetMapping("/plans")
+		public ResponseEntity<List<Plan>> plans()
+		{
+			List <Plan> plans = planServiceImpl.getAllPlans();
+			return new ResponseEntity<>(plans, HttpStatus.OK);
+		}
+		
+		@GetMapping("plan/{id}")
+		public ResponseEntity<Plan> plan(@PathVariable Integer PlanId)
+		{
+			
+		}
+		
+		
+		
+		
+	
+
+}

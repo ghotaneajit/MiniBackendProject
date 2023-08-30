@@ -1,0 +1,29 @@
+package com.example.demo.appProps;
+
+import java.util.HashMap;
+import java.util.Map;
+
+
+public class AppProps {
+
+	private Map <String, String> message = new HashMap();
+
+	public Map<String, String> getMessage() {
+		return message;
+	}
+
+	public void setMessage(Map<String, String> message) {
+		this.message = message;
+	}
+
+	public AppProps() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public AppProps(Map<String, String> message) {
+		super();
+		this.message = message;
+	}
+	
+}

@@ -1,0 +1,18 @@
+package com.example.demo.Entity;
+
+import javax.persistence.Id;
+
+public class Plan {
+
+		@Id
+		private Integer planId;
+		
+		
+		private String planName;
+		
+		private LocalDate planStartedDate;
+		
+		private localDate PlanEndDate;
+		
+		private Integer PlanCategoryId;
+}

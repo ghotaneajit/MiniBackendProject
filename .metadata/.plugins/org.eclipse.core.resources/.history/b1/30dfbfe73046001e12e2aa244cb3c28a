@@ -1,0 +1,9 @@
+package com.example.demo.appProps;
+
+
+
+public class AppProps {
+
+	Map <String, String> message = new HashMap<>();
+	
+}

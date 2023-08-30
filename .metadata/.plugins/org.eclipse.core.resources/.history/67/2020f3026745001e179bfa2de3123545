@@ -1,0 +1,33 @@
+package com.example.demo.Entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity;
+@Data
+@Table(name="PLAN_MASTER")
+public class Plan {
+
+		@Id
+		@GeneratedValue
+		@Column(name = "PLAN_ID")
+		private Integer planId;
+		
+		@Column(name="PLAN_NAME")
+		private String planName;
+		
+		@Column (name="PLAN_STARTED_DATE")
+		private LocalDate planStartedDate;
+		
+		@Column(name="PLAN_END_DATE")
+		private LocalDate PlanEndDate;
+		
+		@Column(name="ACTIVE_SW")
+		private String activeSw;
+		
+		@Column(name="PLAN_CATEGORY_ID")
+		private Integer PlanCategoryId;
+}

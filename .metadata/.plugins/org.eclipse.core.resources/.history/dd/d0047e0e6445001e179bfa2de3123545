@@ -1,0 +1,18 @@
+package com.example.demo.Entity;
+
+import java.time.LocalDate;
+
+public class PlanCateogry {
+	
+	private Integer cateogryId;
+	private String  cateogryName;
+	
+	private String activeSw;
+	
+	private String createdBy;
+	private String updatedBy;
+	
+	private LocalDate createdDate;
+	private LocalDate updatedDate;
+
+}

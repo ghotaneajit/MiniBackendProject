@@ -1,0 +1,27 @@
+package com.example.demo.service;
+
+import java.util.Map;
+
+import com.example.demo.Entity.Plan;
+
+import antlr.collections.List;
+
+public interface PlanService {
+	
+	public Map<Integer, String> getPlanCateogry();
+	
+	public boolean savePlan(Plan plan);
+	
+	public List getAllPlans();
+	
+	public Plan getPlanById(Integer planeId);
+	
+	
+	public boolean updatePlan(Plan plan);
+	
+	public boolean deletePlanById(Integer planId);
+	
+	public boolean planStatusChange(Integer PlanId, String activeSw);
+	
+
+}

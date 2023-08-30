@@ -1,0 +1,7 @@
+package com.example.demo.planRepo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PlanCateogryRepo extends JpaRepository<PlanCateogry, Integer> {
+
+}

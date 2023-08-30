@@ -1,0 +1,30 @@
+package com.example.demo.Entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@Getter
+@Setter
+@AllArgsConstructor
+@Entity
+public class PlanCateogry {
+	
+	private Integer cateogryId;
+	private String  cateogryName;
+	
+	private String activeSw;
+	
+	private String createdBy;
+	private String updatedBy;
+	
+	private LocalDate createdDate;
+	private LocalDate updatedDate;
+
+}

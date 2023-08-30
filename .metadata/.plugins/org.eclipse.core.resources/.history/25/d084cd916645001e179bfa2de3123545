@@ -1,0 +1,23 @@
+package com.example.demo.Entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+public class Plan {
+
+		@Id
+		@GeneratedValue
+		@Column(name = "PLAN_ID")
+		private Integer planId;
+		
+		
+		private String planName;
+		
+		private LocalDate planStartedDate;
+		
+		private LocalDate PlanEndDate;
+		
+		private Integer PlanCategoryId;
+}

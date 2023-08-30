@@ -1,0 +1,39 @@
+package com.example.demo.Entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@NoArgsConstructor
+@Getter
+@Setter
+@AllArgsConstructor
+@Entity
+public class PlanCateogry {
+	
+	@Id
+	@Column(name = "CATEOGRY_ID")
+	private Integer cateogryId;
+	@Column(name = "CATEOGRY_NAME")
+	private String  cateogryName;
+	@Column(name = "ACTIVE_SW")
+	private String activeSw;
+	
+	@Column(name = "CREATED_BY")
+	private String createdBy;
+	@Column(name = "UPDATED_BY")
+	private String updatedBy;
+	
+	@Column(name = "CREATED_DATE")
+	private LocalDate createdDate;
+	@Column(name = "UPDATED_DATE")
+	private LocalDate updatedDate;
+
+}

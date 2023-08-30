@@ -1,0 +1,10 @@
+package com.example.demo.appProps;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class AppProps {
+
+	private Map <String, String> message = new HashMap();
+	
+}
